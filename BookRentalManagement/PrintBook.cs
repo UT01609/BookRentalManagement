@@ -16,5 +16,11 @@ namespace BookRentalManagement
             ISBN = iSBN;
             NumberOfPages = numberOfPages;
         }
+
+
+        public override string ToString()
+        {
+            return $"{base.ToString()},isbn:{ISBN},numberofpages:{NumberOfPages}";
+        }
     }
 }

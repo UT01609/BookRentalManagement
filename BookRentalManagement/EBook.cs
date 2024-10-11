@@ -16,5 +16,10 @@ namespace BookRentalManagement
             Filesize = filesize;
             Format = format;
         }
+
+        public override string ToString()
+        {
+            return $"{base.ToString()}, format:{Format},filesize:{Filesize}";
+        }
     }
 }
