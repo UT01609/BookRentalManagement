@@ -18,7 +18,7 @@ namespace BookRentalManagement
             {
                 var book = new Book(UniId++, title, author, rentalPrice);
                 books.Add(book);
-                Console.WriteLine("Book Add Successfully");
+                Console.WriteLine("Book Add Successfully.....");
             }
         }
 
@@ -26,7 +26,7 @@ namespace BookRentalManagement
         {
             if (books.Count == 0)
             {
-                Console.WriteLine("Books Are Not Found");
+                Console.WriteLine("Books Are Not Found.....");
             }
             foreach (var book in books)
             {
@@ -44,12 +44,12 @@ namespace BookRentalManagement
                 {
                     books.Remove(book);
                     books.Add(new Book(bookId, newTitle, newAuthor, newRentalPrice));
-                    Console.WriteLine("Book Update Successfully");
+                    Console.WriteLine("Book Update Successfully.....");
                 }
             }
             else
             {
-                Console.WriteLine("Books Are Not Found");
+                Console.WriteLine("Books Are Not Found......");
             }
         }
         public void DeleteBook(int bookId)
@@ -58,11 +58,11 @@ namespace BookRentalManagement
             if (book != null)
             {
                 books.Remove(book);
-                Console.WriteLine("Book Delete Successfully");
+                Console.WriteLine("Book Delete Successfully.....");
             }
             else
             {
-                Console.WriteLine("Books Are Not Found");
+                Console.WriteLine("Books Are Not Found....");
             }
 
         }
@@ -71,11 +71,11 @@ namespace BookRentalManagement
         {
             while (rentalPrice <= 0)
             {
-                Console.WriteLine("Please Enter the valid price");
+                Console.WriteLine("Please Enter the valid price.....");
 
                 if (!decimal.TryParse(Console.ReadLine(), out rentalPrice) || rentalPrice <= 0)
                 {
-                    Console.WriteLine("Invalid Input");
+                    Console.WriteLine("Input the value again....");
                 }
             }
             return true;
